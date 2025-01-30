@@ -3,18 +3,66 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<main>
+{{ nom }}
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skill">
+            <h3>HTML</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>CSS</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 80%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>JavaScript</h3>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 75%;"></div>
+            </div>
+        </div>
+        <!-- Add more skills as needed -->
+    </section>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <style>
+    #skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/laragon/www/NasPortfolio/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>C:/laragon/www/NasPortfolio/templates/home/index.html.twig</code></li>
-    </ul>
-</div>
+    #skills h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .skill {
+        margin-bottom: 15px;
+    }
+
+    .skill h3 {
+        margin: 0;
+    }
+
+    .skill-bar {
+        background-color: #e0e0e0;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .skill-level {
+        height: 20px;
+        background-color: #76c7c0;
+        border-radius: 5px 0 0 5px;
+    }
+    </style>
+</main>
 {% endblock %}
